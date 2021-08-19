@@ -1,0 +1,28 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+#coded-by {
+  text-align: center;
+}
+#big-icon {
+  max-width: 180px;
+  align-self: center;
+}
+#week {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+}
+#design-pls {
+  margin: 0 auto;
+  padding: 15px;
+}
+.container {
+  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+}
+#weather-icon {
+  max-width: 70px;
+}
+#quote {
+  font-family: "Josefin Sans", sans-serif;
+}
