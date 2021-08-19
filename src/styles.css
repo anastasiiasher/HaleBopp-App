@@ -26,3 +26,6 @@ body {
 #quote {
   font-family: "Josefin Sans", sans-serif;
 }
+#icons{
+  max-width: 20px;
+}
