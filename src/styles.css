@@ -3,6 +3,8 @@ body {
 }
 #coded-by {
   text-align: center;
+  text-decoration: none;
+  color: black;
 }
 #big-icon {
   max-width: 180px;
@@ -10,25 +12,39 @@ body {
 }
 #week {
   text-align: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Besley', serif;
+font-family: 'Comfortaa', cursive;
   font-size: 20px;
 }
 #design-pls {
   margin: 0 auto;
-  padding: 15px;
-}
-.container {
-  background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  padding-left: 50px;
+  padding-top:40px;
+  background:linear-gradient(to top, #dfe9f3 0%, white 100%);
+  border-radius: 10px;
 }
 #weather-icon {
   max-width: 70px;
 }
 #quote {
-  font-family: "Josefin Sans", sans-serif;
-}
+  font-family:'Besley', serif;
+  font-size: 20px;
+  max-width: 100%;
+} 
 #icons{
   max-width: 100px;
 }
 a { 
   text-decoration: none;
+}
+h5{
+  padding-top: 10px;
+}
+#sevendays{
+  padding-top: 30px;
+}
+.card{
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top:50px;
 }
