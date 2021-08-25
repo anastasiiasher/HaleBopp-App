@@ -66,6 +66,21 @@ function searchGeo(event) {
       tempElement.innerHTML = `${temperature}`;
       let cityName = document.querySelector("#city");
       cityName.innerHTML = `${response.data.name}`;
+      let descriptionElement = document.querySelector("#description");
+      let humidityElement = document.querySelector("#humidity");
+      let windElement = document.querySelector("#wind");
+      let iconElement = document.querySelector("#icon");
+
+      descriptionElement.innerHTML = response.data.weather[0].description;
+      humidityElement.innerHTML = response.data.main.humidity;
+      windElement.innerHTML = Math.round(response.data.wind.speed);
+      iconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      );
+      iconElement.setAttribute("alt", response.data.weather[0].description);
+
+      getForecast(response.data.coord);
     }
     const axios = require("axios");
     axios.get(`${apiURL}&appid=${apiKey}`).then(showTemperature);
@@ -77,7 +92,6 @@ submitGeo.addEventListener("click", searchGeo);
 function formatDate(timestamp) {
   let dateElement = document.querySelector("#time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
   let date = new Date(timestamp);
   let hours = date.getHours();
