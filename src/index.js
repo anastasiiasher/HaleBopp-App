@@ -75,6 +75,10 @@ function searchGeo(event) {
 let submitGeo = document.querySelector("#geo");
 submitGeo.addEventListener("click", searchGeo);
 function formatDate(timestamp) {
+  let dateElement = document.querySelector("#timezone");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
   let date = new Date(timestamp);
   let hours = date.getHours();
   if (hours < 10) {
@@ -86,7 +90,3 @@ function formatDate(timestamp) {
   }
   return `${hours}:${minutes}`;
 }
-let dateElement = document.querySelector("#timezone");
-dateElement.innerHTML = formatDate(response.data.dt * 1000);
-let descriptionElement = document.querySelector("#description");
-descriptionElement.innerHTML = response.data.weather[0].description;
