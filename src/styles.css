@@ -48,3 +48,6 @@ h5{
   margin: 0 auto;
   padding-top:50px;
 }
+#timezone, #description::first-letter{
+  text-transform: capitalize;
+}

@@ -76,3 +76,20 @@ function searchGeo(event) {
 }
 let submitGeo = document.querySelector("#geo");
 submitGeo.addEventListener("click", searchGeo);
+
+let descriptionEt = document.querySelector("#description");
+descriptionEt.innerHTML = response.data.weather[0].description;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+let dateElement = document.querySelector("#timezone");
+dateElement.innerHTML = formatDate(response.data.dt * 1000);
