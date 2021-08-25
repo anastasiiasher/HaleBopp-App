@@ -85,10 +85,8 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
   return `${hours}:${minutes}`;
-  let descriptionEt = document.querySelector("#description");
-  descriptionEt.innerHTML = response.data.weather[0].description;
-  let dateElement = document.querySelector("#timezone");
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 let dateElement = document.querySelector("#timezone");
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
+let descriptionElement = document.querySelector("#description");
+descriptionElement.innerHTML = response.data.weather[0].description;
