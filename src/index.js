@@ -36,8 +36,6 @@ function s4Wapp(event) {
   let city = `${newCity.value}`;
   let current = document.querySelector("#city");
   current.innerHTML = city;
-  let country = document.querySelector("#country");
-  country.innerHTML = null;
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   function showTemperature(response) {
     console.log(response);
@@ -76,9 +74,6 @@ function searchGeo(event) {
 }
 let submitGeo = document.querySelector("#geo");
 submitGeo.addEventListener("click", searchGeo);
-
-let descriptionEt = document.querySelector("#description");
-descriptionEt.innerHTML = response.data.weather[0].description;
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -90,6 +85,10 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
   return `${hours}:${minutes}`;
+  let descriptionEt = document.querySelector("#description");
+  descriptionEt.innerHTML = response.data.weather[0].description;
+  let dateElement = document.querySelector("#timezone");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
 }
 let dateElement = document.querySelector("#timezone");
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
