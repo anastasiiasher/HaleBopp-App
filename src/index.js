@@ -69,7 +69,7 @@ function searchGeo(event) {
       let descriptionElement = document.querySelector("#description");
       let humidityElement = document.querySelector("#humidity");
       let windElement = document.querySelector("#wind");
-      let iconElement = document.querySelector("#icon");
+      let iconElement = document.querySelector("#big-icon");
 
       descriptionElement.innerHTML = response.data.weather[0].description;
       humidityElement.innerHTML = response.data.main.humidity;
