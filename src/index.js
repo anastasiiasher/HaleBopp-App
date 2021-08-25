@@ -75,7 +75,7 @@ function searchGeo(event) {
 let submitGeo = document.querySelector("#geo");
 submitGeo.addEventListener("click", searchGeo);
 function formatDate(timestamp) {
-  let dateElement = document.querySelector("#timezone");
+  let dateElement = document.querySelector("#time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -90,3 +90,5 @@ function formatDate(timestamp) {
   }
   return `${hours}:${minutes}`;
 }
+const axios = require("axios");
+axios.get(`${apiURL}&appid=${apiKey}`).then(formatDate);
