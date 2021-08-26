@@ -28,7 +28,7 @@ let days = [
   "Saturday",
 ];
 let day = days[now.getDay()];
-weatherhello.innerHTML = `${day} ${month} ${date} ${year}`;
+weatherhello.innerHTML = `${day}, <br />${month} ${date} ${year}`;
 function formatDate (timestamp){
 let date = new Date(timestamp);
 let hours = date.getHours();
