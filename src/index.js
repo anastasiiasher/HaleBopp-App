@@ -54,7 +54,7 @@ return `${day} ${hours}:${minutes}`
 function displayTemperature(response) {
   console.log(response.data.main.temp);
   let temperatureElement = document.querySelector("#weather-cel");
-  temperatureElement.innerHTMLv = Math.round(response.data.main.temp);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#description");
