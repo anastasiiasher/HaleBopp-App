@@ -74,7 +74,7 @@ function displayTemperature(response) {
   celsiusTemp = response.data.main.temp;
 }
 function search(city) {
-  let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
+  let apiKey = "bc77907b0e11a419a6d57d1e95e42bea";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=metric`;
   axios.get(apiURL).then(displayTemperature);
 }
@@ -86,7 +86,7 @@ function searchGeo(event) {
     let longitude = position.coords.longitude;
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
-    let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
+    let apiKey = "bc77907b0e11a419a6d57d1e95e42bea";
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     displayTemperature();
   }
@@ -121,6 +121,7 @@ function displayCelsiusTemp(event){
 let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
+let celsiusTemp = null;
 let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
