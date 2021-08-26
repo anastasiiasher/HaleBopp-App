@@ -100,6 +100,7 @@ function searchGeo(event) {
 }
 let submitGeo = document.querySelector("#geo");
 submitGeo.addEventListener("click", searchGeo);
+displayTemperature();
 
 function handleSubmit (event){
   event.preventDefault();
