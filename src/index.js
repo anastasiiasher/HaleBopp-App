@@ -88,22 +88,12 @@ function searchGeo(event) {
     console.log(position.coords.longitude);
     let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-    function showTemperature(response) {
-      let temperature = Math.round(response.data.main.temp);
-      console.log(temperature);
-      let tempElement = document.querySelector("#weather-cel");
-      tempElement.innerHTML = `${temperature}`;
-      let cityName = document.querySelector("#city");
-      cityName.innerHTML = `${response.data.name}`;
-    }
-    const axios = require("axios");
-    axios.get(`${apiURL}&appid=${apiKey}`).then(showTemperature);
+    displayTemperature();
   }
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 let submitGeo = document.querySelector("#geo");
 submitGeo.addEventListener("click", searchGeo);
-displayTemperature();
 
 function handleSubmit(event) {
   event.preventDefault();
