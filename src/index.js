@@ -127,3 +127,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("Prague");
+const axios = require("axios");
