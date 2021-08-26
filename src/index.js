@@ -123,7 +123,6 @@ function displayCelsiusTemp(event){
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
 }
-let celsiusTemp = null;
 
 let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
