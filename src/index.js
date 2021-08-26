@@ -15,7 +15,7 @@ function formatDate(timestamp) {
 
   let now = new Date();
   let weatherhello = document.querySelector("#today-is");
-  let date = now.getDate();
+  let today = now.getDate();
   let year = now.getFullYear();
   let months = [
     "January",
@@ -42,7 +42,9 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[now.getDay()];
-  weatherhello.innerHTML = `${day} ${month} ${date} ${year}`;
+  weatherhello.innerHTML = `${day} ${month} ${today} ${year}`;
+  let timenow = document.querySelector("#time");
+  timenow.innerHTML = `${hours}:${minutes}`;
   return `${hours}:${minutes}`;
 }
 const axios = require("axios");
@@ -88,10 +90,9 @@ function searchGeo(event) {
       let humidityElement = document.querySelector("#humidity");
       let windElement = document.querySelector("#wind");
       let iconElement = document.querySelector("#big-icon");
-
       descriptionElement.innerHTML = response.data.weather[0].description;
-      humidityElement.innerHTML = response.data.main.humidity;
-      windElement.innerHTML = Math.round(response.data.wind.speed);
+      humidityElement.innerHTML = `${response.data.main.humidity}`;
+      windElement.innerHTML = `${Math.round(response.data.wind.speed)}`;
       iconElement.setAttribute(
         "src",
         `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
