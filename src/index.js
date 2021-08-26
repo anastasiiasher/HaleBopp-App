@@ -1,4 +1,25 @@
 import "./styles.css";
+function showtheDay() {
+  let year = now.getFullYear();
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[now.getMonth()];
+  let displaythedate = document.querySelector("#today-is");
+  displaythedate.innerHTML = `${date}.${month}.${year}`;
+}
+showtheDay();
 function formatDate (timestamp){
 let date = new Date(timestamp);
 let hours = date.getHours();
@@ -41,7 +62,7 @@ function displayTemperature(response) {
   celsiusTemp = response.data.main.temp;
 };
 function search(city) {
-  let apiKey = "e95edc3a45daa4834082ba5250327225";
+  let apiKey = "5210c8bb5fde04b36e57156174bebcc4";
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   axios.get(apiURL).then(displayTemperature);
 }
