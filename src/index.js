@@ -49,7 +49,8 @@ let days = [
   "Saturday",
 ];
 let day = days[date.getDay()];
-return `${day} ${hours}:${minutes}`
+let timetable = document.querySelector("#time");
+timetable.innerHTML = `${day} ${hours}:${minutes}`;
 }
 function displayTemperature(response) {
   console.log(response.data.main.temp);
@@ -121,7 +122,7 @@ function displayCelsiusTemp(event){
 let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
-letcelsiusTemp = null;
+celsiusTemp = null;
 let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
