@@ -51,3 +51,10 @@ h5{
 #timezone, #windspeed,#precipitation,#description::first-letter{
   text-transform: capitalize;
 }
+.active {
+  color:black;
+  cursor: default;
+}
+.active:hover{
+  text-decoration: none;
+}
