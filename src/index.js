@@ -18,7 +18,7 @@ function formatDate(timestamp) {
   let date = now.getDate();
   let year = now.getFullYear();
   let months = [
-    "Januart",
+    "January",
     "February",
     "March",
     "April",
