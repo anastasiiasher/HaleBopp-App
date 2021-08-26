@@ -9,7 +9,6 @@ let minutes = date.getMinutes();
  if (minutes < 10) {
       minutes = `0${minutes}`;
  }
-let day = date.getDay();
 let days = [
   "Sunday",
   "Monday",
