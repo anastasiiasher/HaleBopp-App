@@ -51,7 +51,33 @@ let days = [
 let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`
 }
-
+function displayTemperature(response) {
+  console.log(response.data.main.temp);
+  let temperatureElement = document.querySelector("#weather-cel");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = response.data.name;
+  let descriptionElement = document.querySelector("#description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#windspeed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let dateElement = document.querySelector("#time");
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#big-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemp = response.data.main.temp;
+}
+function search(city) {
+  let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=metric`;
+  axios.get(apiURL).then(displayTemperature);
+}
 function searchGeo(event) {
   event.preventDefault();
   function showPosition(position) {
@@ -79,6 +105,12 @@ let submitGeo = document.querySelector("#geo");
 submitGeo.addEventListener("click", searchGeo);
 displayTemperature();
 
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search");
+  search(cityInputElement.value);
+}
+
 function displayFahrenheitTemp(event){
   event.preventDefault();
   let fahrenheitTemp = Math.round((celsiusTemp*9)/5 + 32);
@@ -95,47 +127,13 @@ function displayCelsiusTemp(event){
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
 }
+
+let form = document.querySelector("#searching");
+form.addEventListener("submit", handleSubmit);
+
 let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
-
-function displayTemperature(response) {
-  console.log(response.data.main.temp);
-  let temperatureElement = document.querySelector("#weather-cel");
-  temperatureElement.innerHTML = Math.round(response.data.main.temp);
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = response.data.name;
-  let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
-  let windElement = document.querySelector("#windspeed");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  let dateElement = document.querySelector("#time");
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  let iconElement = document.querySelector("#big-icon");
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-  celsiusTemp = response.data.main.temp;
-}
-
-function search(city) {
-  let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiURL).then(displayTemperature);
-}
-
-function handleSubmit(event) {
-  event.preventDefault();
-  let cityInputElement = document.querySelector("#search");
-  search(cityInputElement.value);
-}
-
-let form = document.querySelector("#searching");
-form.addEventListener("submit", handleSubmit);
 
 search("Prague");
