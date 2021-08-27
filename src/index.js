@@ -72,8 +72,6 @@ function searchGeo(event) {
   event.preventDefault();
   function showPosition(position) {
     console.log(position);
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
     let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
@@ -92,9 +90,9 @@ function handleSubmit(event) {
 }
 function displayFahrenheitTemp(event){
   event.preventDefault();
-  let tempElement = document.querySelector("#weather-cel");
-  let fahrenheitTemp = Math.round((celsiusTemp.value * 9) / 5 + 32);
-  tempElement.innerHTML = fahrenheitTemp.value;
+  let tempEt = document.querySelector("#weather-cel");
+  let fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
+  tempEt.innerHTML = fahrenheitTemp.value;
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
 }
