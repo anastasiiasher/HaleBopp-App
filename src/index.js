@@ -92,9 +92,9 @@ function handleSubmit(event) {
 }
 function displayFahrenheitTemp(event){
   event.preventDefault();
-  let fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
   let tempElement = document.querySelector("#weather-cel");
-  tempElement.innerHTML = fahrenheitTemp;
+  let fahrenheitTemp = Math.round((celsiusTemp * 9) / 5 + 32);
+  tempElement.innerHTML = fahrenheitTemp.value;
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
 }
@@ -110,7 +110,7 @@ function displayCelsiusTemp(event){
 let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
-let celsiusTemp = none;
+let celsiusTemp = null;
 
 search("Prague");
 
