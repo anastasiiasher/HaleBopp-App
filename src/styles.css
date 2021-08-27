@@ -56,3 +56,6 @@ h5{
 .active:hover{
   text-decoration: none;
 }
+#big-icon{
+width: 200px;
+}
