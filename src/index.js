@@ -49,8 +49,7 @@ let days = [
   "Saturday",
 ];
 let day = days[date.getDay()];
-let timetable = document.querySelector("#time");
-timetable.innerHTML = `${day} ${hours}:${minutes}`;
+return `${day} ${hours}:${minutes}`;
 }
 function displayTemperature(response) {
   console.log(response.data.main.temp);
@@ -88,8 +87,8 @@ function searchGeo(event) {
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
     let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-    let apiURL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-    displayTemperature();
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
   }
   navigator.geolocation.getCurrentPosition(showPosition);
 }
@@ -123,10 +122,11 @@ let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
 celsiusTemp = null;
+
+search("Prague");
+
 let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-search("Prague");
-const axios = require("axios");
