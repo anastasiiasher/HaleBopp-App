@@ -92,7 +92,7 @@ function displayFahrenheitTemp(event){
   event.preventDefault();
   let tempEt = document.querySelector("#weather-cel");
   let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  tempEt.innerHTML = Math.round(fahrenheitTemp;
+  tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
 }
