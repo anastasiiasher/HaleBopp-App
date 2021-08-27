@@ -71,7 +71,6 @@ function search(city) {
 function searchGeo(event) {
   event.preventDefault();
   function showPosition(position) {
-    console.log(position);
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
     let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
