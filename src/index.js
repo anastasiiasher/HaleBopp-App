@@ -65,7 +65,7 @@ function displayTemperature(response) {
 }
 function search(city) {
   let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}units=metric`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayTemperature);
 }
 function searchGeo(event) {
@@ -90,7 +90,6 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#search").value;
   search(cityInputElement);
 }
-search("Prague");
 function displayFahrenheitTemp(event){
   event.preventDefault();
   let fahrenheitTemp = Math.round((response.data.main.temp * 9) / 5 + 32);
@@ -112,7 +111,6 @@ let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
 let celsiusTemp = none;
-
 
 search("Prague");
 
