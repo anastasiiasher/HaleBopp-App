@@ -87,10 +87,10 @@ submitGeo.addEventListener("click", searchGeo);
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#search".value);
-  search(cityInputElement.value);
+  let cityInputElement = document.querySelector("#search").value;
+  search(cityInputElement);
 }
-
+search("Prague");
 function displayFahrenheitTemp(event){
   event.preventDefault();
   let fahrenheitTemp = Math.round((response.data.main.temp * 9) / 5 + 32);
