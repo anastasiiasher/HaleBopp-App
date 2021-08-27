@@ -52,7 +52,7 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   let windElement = document.querySelector("#windspeed");
-  windElement.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   let dateElement = document.querySelector("#time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#big-icon");
@@ -87,7 +87,7 @@ submitGeo.addEventListener("click", searchGeo);
 
 function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#search");
+  let cityInputElement = document.querySelector("#search".value);
   search(cityInputElement.value);
 }
 
