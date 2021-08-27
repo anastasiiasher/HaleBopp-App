@@ -50,9 +50,9 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${response.data.main.humidity}+ %`;
+  humidityElement.innerHTML = `${response.data.main.humidity}%`;
   let windElement = document.querySelector("#windspeed");
-  windElement.innerHTML = `${Math.round(response.data.wind.speed)}+ km/h`;
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
   let dateElement = document.querySelector("#time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#big-icon");
@@ -111,7 +111,7 @@ function displayCelsiusTemp(event){
 let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
-celsiusTemp = null;
+let celsiusTemp = response.data.main.temp;
 
 search("Prague");
 
