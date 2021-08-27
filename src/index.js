@@ -111,7 +111,8 @@ function displayCelsiusTemp(event){
 let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
-let celsiusTemp = response.data.main.temp;
+let celsiusTemp = none;
+
 
 search("Prague");
 
