@@ -18,17 +18,7 @@ let months = [
   "December",
 ];
 let month = months[now.getMonth()];
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-weatherhello.innerHTML = `${day}, <br />${month} ${date} ${year}`;
+weatherhello.innerHTML = `${month} ${date} ${year}`;
 function formatDate (timestamp){
 let date = new Date(timestamp);
 let hours = date.getHours();
@@ -60,9 +50,9 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.weather[0].description;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
+  humidityElement.innerHTML = `${response.data.main.humidity}+ %`;
   let windElement = document.querySelector("#windspeed");
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)}+ km/h`;
   let dateElement = document.querySelector("#time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   let iconElement = document.querySelector("#big-icon");
