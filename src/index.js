@@ -62,7 +62,7 @@ function displayForecast(response) {
   `;
   });
   forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = "hello";
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
