@@ -82,6 +82,7 @@ function displayForecast(response) {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+  console.log(forecastElement);
 }
 
 function getForecast(coordinates) {
