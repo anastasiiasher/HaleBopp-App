@@ -22,6 +22,7 @@ font-family: 'Comfortaa', cursive;
   padding-right: 50px;
   padding-top:40px;
   background:linear-gradient(to top, #dfe9f3 20%,#e7e8fd 40.8%, white 100%);
+  background-size:600% 600% 600%;
   -webkit-animation: 10s ease infinite;
   -moz-animation: 10s ease infinite;
   animation: 10s ease infinite;
