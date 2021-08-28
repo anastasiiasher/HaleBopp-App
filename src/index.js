@@ -50,18 +50,19 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `
-   <div class="col-2" id="weekday"> ${day} </div>
-   <img id="icons" src="" alt=""/>
-   <div class="col" id="small-temps">
-   <span class="tempMax"></span>
-   <span class="tempMin"></span>
+   <div class="col-2">
+   <div id="weekday"> ${day} </div>
+   <img id="icons" src="http://openweathermap.org/img/wn/50d@2x.png" alt="" width="42"
+   />
+   <div id="small-temps">
+   <span class="tempMax">20° </span>
+   <span class="tempMin">18° </span>
    </div>
    </div>
   `;
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-  console.log(forecastHTML);
 }
 
 function getForecast(coordinates) {
