@@ -1,5 +1,10 @@
 body {
   font-family: "Montserrat", sans-serif;
+  background: linear-gradient(270deg, #fde9e1, #ace0f9);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationName 17s ease infinite;
+  -moz-animation: AnimationName 17s ease infinite;
+  animation: AnimationName 17s ease infinite;
 }
 #coded-by {
   text-align: center;
