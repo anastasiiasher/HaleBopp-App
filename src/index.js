@@ -41,6 +41,28 @@ let days = [
 let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#sevendays");
+  let days = ["Saturday", "Sunday", "Monday", "Tuesday"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+   <div class="col-2" id="weekday"> ${day} </div>
+   <img id="icons" src="" alt=""/>
+   <div class="col" id="small-temps">
+   <span class="tempMax"></span>
+   <span class="tempMin"></span>
+   </div>
+   </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayTemperature(response) {
   console.log(response.data.main.temp);
   let temperatureElement = document.querySelector("#weather-cel");
