@@ -75,8 +75,7 @@ function displayForecast(response) {
    <span class="tempMax">${Math.round(forecastDay.temp.max)}° </span>
    <span class="tempMin">${Math.round(forecastDay.temp.min)}°  </span>
    </div>
-   </div>
-  `;
+   </div>`;
     }
   });
 
@@ -138,6 +137,35 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#search").value;
   search(cityInputElement);
 }
+function displayQuotes() {
+  let quote = document.querySelector("#quote");
+  let quotes = [
+    `Wherever you go, no matter what the weather, always bring your own sunshine.
+
+Anthony J. D'Angelo`,
+    `Sunshine is delicious, rain is refreshing, wind braces us up, snow is exhilarating; there is really no such thing as bad weather, only different kinds of good weather.
+
+John Ruskin`,
+    `Everybody talks about the weather, but nobody does anything about it.
+
+Charles Dudley Warner`,
+    `“The Best Way To Get Started Is To Quit Talking And Begin Doing.” – Walt Disney`,
+    `“The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.” – Winston Churchill`,
+    `“Don’t Let Yesterday Take Up Too Much Of Today.” – Will Rogers`,
+    `“If You Are Working On Something That You Really Care About, You Don’t Have To Be Pushed. The Vision Pulls You.” – Steve Jobs`,
+    ` “People Who Are Crazy Enough To Think They Can Change The World, Are The Ones Who Do.” – Rob Siltanen`,
+    `“Failure Will Never Overtake Me If My Determination To Succeed Is Strong Enough.” – Og Mandino`,
+    `“Knowing Is Not Enough; We Must Apply. Wishing Is Not Enough; We Must Do.” – Johann Wolfgang Von Goethe
+
+`,
+    `“Imagine Your Life Is Perfect In Every Respect; What Would It Look Like?” – Brian Tracy`,
+    `“The Man Who Has Confidence In Himself Gains The Confidence Of Others.” – Hasidic Proverb`,
+    `“Creativity Is Intelligence Having Fun.” – Albert Einstein`,
+    `“What You Lack In Talent Can Be Made Up With Desire, Hustle And Giving 110% All The Time.” – Don Zimmer`,
+  ];
+  let randomquote = Math.floor(Math.random() * facts);
+  quote.innerHTML = quotes[randomquote];
+}
 function displayFahrenheitTemp(event){
   event.preventDefault();
   let tempEt = document.querySelector("#weather-cel");
@@ -166,3 +194,5 @@ let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
+
+displayQuotes();
