@@ -21,10 +21,13 @@ font-family: 'Comfortaa', cursive;
   padding-left: 50px;
   padding-right: 50px;
   padding-top:40px;
-  background:linear-gradient(to top, #dfe9f3 10%,rgb(232, 233, 251) 50.8%, white 100%);
-  -webkit-animation: AnimationName 10s ease infinite;
-  -moz-animation: AnimationName 10s ease infinite;
-  animation: AnimationName 10s ease infinite;
+  background: linear-gradient(260deg, #dfe9f3, #e7e8fd, #fceffa, #ffffff);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 9s ease infinite;
+    -moz-animation: AnimationName 9s ease infinite;
+    -o-animation: AnimationName 9s ease infinite;
+    animation: AnimationName 9s ease infinite;
   border-radius: 13px;
 }
 #weather-icon {
