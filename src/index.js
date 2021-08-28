@@ -62,7 +62,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (1 < index < 6) {
-      forecastNew =
+      forecastHTML =
         forecastHTML +
         `
    <div class="col-2">
@@ -80,8 +80,8 @@ function displayForecast(response) {
     }
   });
 
-  forecastHTMLNew = forecastNew + `</div>`;
-  forecastElement.innerHTML = forecastHTMLNew;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
