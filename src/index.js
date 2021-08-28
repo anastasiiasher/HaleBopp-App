@@ -59,6 +59,7 @@ function formatDay(timestamp) {
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = `hey`;
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (0 < index < 6) {
@@ -168,5 +169,3 @@ let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
-
-displayForecast();
