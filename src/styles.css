@@ -22,6 +22,9 @@ font-family: 'Comfortaa', cursive;
   padding-right: 50px;
   padding-top:40px;
   background:linear-gradient(to top, #dfe9f3 0%, white 100%);
+  -webkit-animation: AnimationName 20s ease infinite;
+  -moz-animation: AnimationName 20s ease infinite;
+  animation: AnimationName 20s ease infinite;
   border-radius: 10px;
 }
 #weather-icon {
