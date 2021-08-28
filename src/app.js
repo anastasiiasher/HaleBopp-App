@@ -156,6 +156,15 @@ function displayQuotes() {
     `“The Man Who Has Confidence In Himself Gains The Confidence Of Others.” – Hasidic Proverb`,
     `“Creativity Is Intelligence Having Fun.” – Albert Einstein`,
     `“What You Lack In Talent Can Be Made Up With Desire, Hustle And Giving 110% All The Time.” – Don Zimmer`,
+    `"Take up one idea. Make that one idea your life--think of it, dream of it, live on that idea. Let the brain, muscles, nerves, every part of your body, be full of that idea, and just leave every other idea alone. This is the way to success." --Swami Vivekananda`,
+    `"All our dreams can come true if we have the courage to pursue them." --Walt Disney`,
+    `"Just when the caterpillar thought the world was ending, he turned into a butterfly." --Proverb`,
+    `"Opportunities don't happen, you create them." --Chris Grosser`,
+    `"Try not to become a person of success, but rather try to become a person of value." --Albert Einstein`,
+    `"I have not failed. I've just found 10,000 ways that won't work." --Thomas A. Edison`,
+    `"If you're going through hell keep going." --Winston Churchill`,
+    `"When you stop chasing the wrong things, you give the right things a chance to catch you." --Lolly Daskal`,
+    `"Happiness is a butterfly, which when pursued, is always beyond your grasp, but which, if you will sit down quietly, may alight upon you." --Nathaniel Hawthorne`,
   ];
   let randomquote = Math.floor(Math.random() * quotes.length);
   quote.innerHTML = quotes[randomquote];
