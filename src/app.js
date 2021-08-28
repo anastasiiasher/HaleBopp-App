@@ -163,7 +163,7 @@ Charles Dudley Warner`,
     `“Creativity Is Intelligence Having Fun.” – Albert Einstein`,
     `“What You Lack In Talent Can Be Made Up With Desire, Hustle And Giving 110% All The Time.” – Don Zimmer`,
   ];
-  let randomquote = Math.floor(Math.random() * facts);
+  let randomquote = Math.floor(Math.random() * quotes);
   quote.innerHTML = quotes[randomquote];
 }
 function displayFahrenheitTemp(event){
