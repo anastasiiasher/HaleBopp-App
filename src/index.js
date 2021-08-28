@@ -113,7 +113,7 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
   celsiusTemp = response.data.main.temp;
   console.log(celsiusTemp);
-getForecast(response.data.coords);
+getForecast(response.data.coord);
 }
 function search(city) {
   let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
