@@ -140,15 +140,9 @@ function handleSubmit(event) {
 function displayQuotes() {
   let quote = document.querySelector("#quote");
   let quotes = [
-    `Wherever you go, no matter what the weather, always bring your own sunshine.
-
-Anthony J. D'Angelo`,
-    `Sunshine is delicious, rain is refreshing, wind braces us up, snow is exhilarating; there is really no such thing as bad weather, only different kinds of good weather.
-
-John Ruskin`,
-    `Everybody talks about the weather, but nobody does anything about it.
-
-Charles Dudley Warner`,
+    `"Wherever you go, no matter what the weather, always bring your own sunshine."  – Anthony J. D'Angelo`,
+    `"Sunshine is delicious, rain is refreshing, wind braces us up, snow is exhilarating; there is really no such thing as bad weather, only different kinds of good weather."  – John Ruskin`,
+    `"Everybody talks about the weather, but nobody does anything about it."  – Charles Dudley Warner`,
     `“The Best Way To Get Started Is To Quit Talking And Begin Doing.” – Walt Disney`,
     `“The Pessimist Sees Difficulty In Every Opportunity. The Optimist Sees Opportunity In Every Difficulty.” – Winston Churchill`,
     `“Don’t Let Yesterday Take Up Too Much Of Today.” – Will Rogers`,
