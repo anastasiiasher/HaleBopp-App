@@ -66,7 +66,7 @@ function displayForecast(response) {
         forecastHTML +
         `
    <div class="col-2">
-   <div id="weekday"> ${formatDay(forecastDay.dt)} </div>
+   <div id="weekday"> ${formatDay(forecastDay.dt * 1000)} </div>
    <img id="icons" src="http://openweathermap.org/img/wn/${
      forecastDay.weather[0].icon
    }@2x.png" alt="" width="42"
@@ -102,7 +102,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#windspeed");
   windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   let dateElement = document.querySelector("#time");
-  dateElement.innerHTML = `${formatDate(forecastDay.dt * 1000)}`;
+  dateElement.innerHTML = `${formatDate(response.data.dt * 1000)}`;
   let iconElement = document.querySelector("#big-icon");
   iconElement.setAttribute(
     "src",
