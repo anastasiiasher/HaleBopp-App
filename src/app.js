@@ -102,7 +102,7 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#windspeed");
   windElement.innerHTML = `${Math.round(response.data.wind.speed)} km/h`;
   let dateElement = document.querySelector("#time");
-  dateElement.innerHTML = `${formatDate(response.data.dt * 1000)}`;
+  dateElement.innerHTML = `${formatDate(forecastDay.dt * 1000)}`;
   let iconElement = document.querySelector("#big-icon");
   iconElement.setAttribute(
     "src",
