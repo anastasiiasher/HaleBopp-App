@@ -38,8 +38,9 @@ a {
 h5{
   padding-top: 10px;
 }
-#sevendays{
+#forecast{
   padding-top: 30px;
+  margin: 0 auto;
 }
 .card{
   max-width: 100%;
@@ -63,4 +64,11 @@ max-width: 130px;
 .tempMin{
   font-size: 15px;
   text-align: center;
+}
+#submitButton, #geo:hover{
+background-color: #dfe9f3;
+color: black;
+border: 2px solid #dfe9f3;
+cursor: pointer;
+font-size: larger;
 }
