@@ -96,8 +96,6 @@ function getForecast(coordinates) {
 }
 function displayTemperature(response) {
   console.log(response.data.main.temp);
-  maxCels = response.data.main.temp_max;
-  minCels = response.data.main.temp_min;
 
   let temperatureElement = document.querySelector("#weather-cel");
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
@@ -184,13 +182,6 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
-
-  let maxFahren = (maxCels * 9) / 5 + 32;
-  let maximum = document.querySelector("#cel2F");
-  maximum.innerHTML = Math.round(maxFahren);
-  let minFahren = (minCels * 9) / 5 + 32;
-  let minimum = document.querySelector("#cel2Fm");
-  minimum.innerHTML = Math.round(minFahren);
 
 }
 
