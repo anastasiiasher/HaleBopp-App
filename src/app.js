@@ -72,8 +72,10 @@ function displayForecast(response) {
    }@2x.png" alt="" width="42"
    />
    <div id="small-temps">
-   <span class="tempMax">${Math.round(forecastDay.temp.max)}° </span>
-   <span class="tempMin">${Math.round(forecastDay.temp.min)}°  </span>
+   <span class="tempMax" id="cel2F">${Math.round(forecastDay.temp.max)}° </span>
+   <span class="tempMin" id="cel2F">${Math.round(
+     forecastDay.temp.min
+   )}°  </span>
    </div>
    </div>`;
     }
@@ -176,6 +178,9 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
+  let cel2fahren = document.querySelector("#cel2F".value);
+  let fahrenfromcel = `(${cel2fahren}*9)/5+32`;
+  cel2fahren.innerHTML = Math.round(fahrenfromcel);
 }
 
 function displayCelsiusTemp(event){
@@ -184,6 +189,8 @@ function displayCelsiusTemp(event){
   tempEt.innerHTML = Math.round(celsiusTemp);
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
+  let cel2fahren = document.querySelector("#cel2F".value);
+  cel2fahren.innerHTML = Math.round(cel2fahren);
 }
 
 let form = document.querySelector("#searching");
