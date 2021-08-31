@@ -202,7 +202,7 @@ search("Prague");
 
 let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
-let celsiusLink = displayForecast(formatDay(forecastDay.dt * 1000);
+let celsiusLink = displayForecast(formatDay(forecastDay.dt * 1000));
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 displayQuotes();
