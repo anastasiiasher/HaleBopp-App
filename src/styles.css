@@ -65,10 +65,10 @@ max-width: 130px;
   font-size: 15px;
   text-align: center;
 }
-#submitButton, #geo:hover{
-background-color: #dfe9f3;
+#submitButton:hover, #geo:hover{
+background-color: #dfe9f3 transparent;
 color: black;
-border: 2px solid #dfe9f3;
+border: 2px solid black;
 cursor: pointer;
 font-size: larger;
 }
