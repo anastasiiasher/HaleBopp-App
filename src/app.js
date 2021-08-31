@@ -19,7 +19,6 @@ let months = [
 ];
 let month = months[now.getMonth()];
 weatherhello.innerHTML = `${month} ${date} ${year}`;
-let units = "metric";
 function formatDate (timestamp){
 let date = new Date(timestamp);
 let hours = date.getHours();
@@ -93,8 +92,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-  let units = "metric";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&${units}`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
@@ -124,8 +122,7 @@ getForecast(response.data.coord);
 }
 function search(city) {
   let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-  let units = "metric";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&${units}`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiURL).then(displayTemperature);
 }
 function searchGeo(event) {
@@ -134,8 +131,7 @@ function searchGeo(event) {
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
     let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-    let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&${units}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayTemperature);
   }
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -187,8 +183,7 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
-  units = "imperial";
-  search(city);
+
 }
 
 function displayCelsiusTemp(event){
@@ -197,8 +192,6 @@ function displayCelsiusTemp(event){
   tempEt.innerHTML = Math.round(celsiusTemp);
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
-  units = "metric";
-  search(city);
 }
 
 let form = document.querySelector("#searching");
