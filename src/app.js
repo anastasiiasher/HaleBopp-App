@@ -178,9 +178,8 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
-  let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000)).value;
-  let fahrenfromcel = `(${cel2fahren}*9)/5+32`;
-  cel2fahren.innerHTML = Math.round(fahrenfromcel);
+  let newApi = search(apiURL);
+  newApi.innerHTML = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
 }
 
 function displayCelsiusTemp(event){
@@ -189,8 +188,6 @@ function displayCelsiusTemp(event){
   tempEt.innerHTML = Math.round(celsiusTemp);
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
-  let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000)).value;
-  cel2fahren.innerHTML = Math.round(cel2fahren);
 }
 
 let form = document.querySelector("#searching");
