@@ -179,7 +179,7 @@ function displayFahrenheitTemp(event){
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
   let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000));
-  let fahrenfromcel = `(${cel2fahren.value}*9)/5+32`;
+  let fahrenfromcel = `(${cel2fahren}*9)/5+32`;
   cel2fahren.innerHTML = Math.round(fahrenfromcel);
 }
 
@@ -189,7 +189,7 @@ function displayCelsiusTemp(event){
   tempEt.innerHTML = Math.round(celsiusTemp);
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
-  let cel2fahren = document.querySelector("#cel2F".value);
+  let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000));
   cel2fahren.innerHTML = Math.round(cel2fahren);
 }
 
@@ -202,7 +202,7 @@ search("Prague");
 
 let fahrenheitlink = document.querySelector("#fahren");
 fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
-let celsiusLink = displayForecast(formatDay(forecastDay.dt * 1000));
+let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 displayQuotes();
