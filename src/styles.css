@@ -68,7 +68,6 @@ max-width: 130px;
 #submitButton:hover, #geo:hover{
 background-color: #dfe9f3 transparent;
 color: black;
-border: 2px solid #A3BBE4;
 cursor: pointer;
 font-size: larger;
 }
