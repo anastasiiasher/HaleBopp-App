@@ -72,12 +72,13 @@ function displayForecast(response) {
    }@2x.png" alt="" width="42"
    />
    <div id="small-temps">
-   <span class="tempMax" id="cel2F">${Math.round(
+   <span class="tempMax" id="cel2F">Max: ${Math.round(
      
      forecastDay.temp.max
    
    )}°C </span>
-   <span class="tempMin" id="cel2F">${Math.round(
+   <br />
+   <span class="tempMin" id="cel2F"> Min: ${Math.round(
      forecastDay.temp.min
    )}°C  </span>
    </div>
