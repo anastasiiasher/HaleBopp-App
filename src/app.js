@@ -183,6 +183,8 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
+  units = "imperial";
+  search(city);
 }
 
 function displayCelsiusTemp(event){
@@ -191,6 +193,8 @@ function displayCelsiusTemp(event){
   tempEt.innerHTML = Math.round(celsiusTemp);
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
+  units = "metric";
+  search(city);
 }
 
 let form = document.querySelector("#searching");
