@@ -178,7 +178,7 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
-  let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000));
+  let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000)).value;
   let fahrenfromcel = `(${cel2fahren}*9)/5+32`;
   cel2fahren.innerHTML = Math.round(fahrenfromcel);
 }
@@ -189,7 +189,7 @@ function displayCelsiusTemp(event){
   tempEt.innerHTML = Math.round(celsiusTemp);
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
-  let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000));
+  let cel2fahren = displayForecast(formatDay(forecastDay.dt * 1000)).value;
   cel2fahren.innerHTML = Math.round(cel2fahren);
 }
 
