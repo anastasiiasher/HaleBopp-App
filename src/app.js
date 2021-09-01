@@ -182,6 +182,8 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
+  let c2fconsol = document.querySelector(displayForecast(forecastDay.temp.max));
+  c2fconsol.innerHTML = `hi`;
 
 }
 
