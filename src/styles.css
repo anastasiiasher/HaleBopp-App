@@ -55,7 +55,7 @@ h5{
 .active {
   color:black;
   cursor: default;
-  font-weight: 50px;
+  font-size: larger;
 }
 .active:hover{
   text-decoration: none;
