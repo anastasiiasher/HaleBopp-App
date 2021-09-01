@@ -90,7 +90,8 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
 }
@@ -121,7 +122,8 @@ getForecast(response.data.coord);
 }
 function search(city) {
   let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let units = "metric";
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiURL).then(displayTemperature);
 }
 function searchGeo(event) {
@@ -130,7 +132,8 @@ function searchGeo(event) {
     console.log(position.coords.latitude);
     console.log(position.coords.longitude);
     let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(displayTemperature);
   }
   navigator.geolocation.getCurrentPosition(showPosition);
@@ -182,7 +185,7 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
-
+  units = "imperial";
 }
 
 function displayCelsiusTemp(event){
@@ -191,13 +194,14 @@ function displayCelsiusTemp(event){
   tempEt.innerHTML = Math.round(celsiusTemp);
   fahrenheitlink.classList.remove("active");
   celsiusLink.classList.add("active");
+  units = "metric";
 }
 
 let form = document.querySelector("#searching");
 form.addEventListener("submit", handleSubmit);
 
 let celsiusTemp = null;
-
+let units = "metric";
 search("Prague");
 
 let fahrenheitlink = document.querySelector("#fahren");
@@ -205,12 +209,4 @@ fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-function forecastFahrenheit(event){
-event.preventDefault();
-response(displayForecast)
-  .catch(forecastDay.temp.max)
-  .then((forecastDay.temp.max.innerHTML = (forecastDay.temp.max * 9) / 5 + 32));
-}
-let fahrenLink = document.querySelector("#fahren");
-fahrenLink.addEventListener("click",forecastFahrenheit);
 displayQuotes();
