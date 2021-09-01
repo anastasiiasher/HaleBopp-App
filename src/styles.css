@@ -4,7 +4,7 @@ body {
 #coded-by {
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: #132743; 
 }
 #big-icon {
   max-width: 180px;
@@ -15,6 +15,7 @@ body {
   font-family: 'Besley', serif;
 font-family: 'Comfortaa', cursive;
   font-size: 20px;
+  color:#132743; 
 }
 #design-pls {
   margin: 0 auto;
@@ -37,12 +38,13 @@ a {
 }
 h5{
   padding-top: 10px;
-}
+  color:#132743; }
 #forecast{
   padding-top:-2px;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
+  color:#132743; 
 }
 .card{
   max-width: 100%;
@@ -51,12 +53,14 @@ h5{
 }
 #timezone::first-letter, #windspeed::first-letter,#precipitation::first-letter{
 text-transform: capitalize;
+color:#132743; 
 }
 #description::first-letter{
+  color:#132743; 
   text-transform: capitalize;
 }
 .active {
-  color:black;
+  color:#132743; 
   cursor: default;
   font-size: larger;
 }
@@ -69,23 +73,27 @@ max-width: 130px;
 .tempMin{
   font-size: 15px;
   text-align: center;
+  color:#132743; 
 }
 #submitButton:hover, #geo:hover{
 background-color: #dfe9f3 transparent;
-color: black;
+color:#132743; 
 cursor: pointer;
 font-size: larger;
 }
 #forecastweek{
   text-align: center;
   background:linear-gradient(to top, #dfe9f3 0%, white 100%);
+  color:#132743; 
 }
 #forecastweek:hover{
 font-size: 23px;
 background: linear-gradient(360deg, rgb(208, 245, 236) 0%, rgb(223, 233, 243) 53%);
 border-radius: 10px;
 text-align: center;
+color:#132743; 
 }
 #today-is, #time{
+  color:#132743; 
   font-size: 18px;
 }
