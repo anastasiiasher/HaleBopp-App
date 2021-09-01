@@ -18,7 +18,7 @@ let months = [
   "December",
 ];
 let month = months[now.getMonth()];
-weatherhello.innerHTML = `${month} ${date} ${year}`;
+weatherhello.innerHTML = `${month} ${date}, ${year}`;
 function formatDate (timestamp){
 let date = new Date(timestamp);
 let hours = date.getHours();
