@@ -73,9 +73,14 @@ color: black;
 cursor: pointer;
 font-size: larger;
 }
+#forecastweek{
+  text-align: center;
+  background:linear-gradient(to top, #dfe9f3 0%, white 100%);
+  border-radius: 10px;
+}
 #forecastweek:hover{
 font-size: 23px;
 background: linear-gradient(360deg, rgb(208, 245, 236) 0%, rgb(223, 233, 243) 53%);
-border-radius: 5px;
+border-radius: 10px;
 text-align: center;
 }
