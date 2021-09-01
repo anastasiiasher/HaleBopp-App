@@ -64,7 +64,7 @@ color:#132743;
 .active {
   color:#132743; 
   cursor: default;
-  font-size: larger;
+  font-size: 25px;
 }
 .active:hover{
   text-decoration: none;
