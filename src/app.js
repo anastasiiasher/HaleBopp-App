@@ -207,9 +207,10 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 function forecastFahrenheit(event){
 event.preventDefault();
-let fahrEt = displayForecast(response(`#cel2F`));
-fahrEt.innerHTML = `hi`;
+fetch(displayForecast(response))
+  .catch(forecastDay.temp.max)
+  .then((forecastDay.temp.max.innerHTML = (forecastDay.temp.max * 9) / 5 + 32));
 }
-let fahrenLink = document.querySelector("#forecastweek");
+let fahrenLink = document.querySelector("#fahren");
 fahrenLink.addEventListener("click",forecastFahrenheit);
 displayQuotes();
