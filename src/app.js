@@ -101,8 +101,6 @@ function changeFahrenheit(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
-let celcius = document.querySelector("#celcius");
-celcius.addEventListener("click", changeCelcius);
 function changeCelcius(event) {
   event.preventDefault();
   let apiKey = "72a6f5c8d3593367d6b1bec5268294b4";
@@ -110,7 +108,9 @@ function changeCelcius(event) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayForecast);
 }
-  axios.get(apiUrl).then(displayForecast);
+let celcius = document.querySelector("#celcius");
+celcius.addEventListener("click", changeCelcius);
+axios.get(apiUrl).then(displayForecast);
 }
 function displayTemperature(response) {
   console.log(response.data.main.temp);
