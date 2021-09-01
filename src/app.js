@@ -109,7 +109,7 @@ function changeCelcius(event) {
 }
 let fahrenheit = document.querySelector("#fahren");
 fahrenheit.addEventListener("click", changeFahrenheit);
-let celcius = document.querySelector("#celcius");
+let celcius = document.querySelector("#celsius");
 celcius.addEventListener("click", changeCelcius);
 }
 function displayTemperature(response) {
