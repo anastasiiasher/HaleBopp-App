@@ -74,11 +74,11 @@ function displayForecast(response) {
    <div id="small-temps">
    <span class="tempMax" id="cel2F"> Max: ${Math.round(
      forecastDay.temp.max
-   )}°C </span>
+   )}<a href="#" id="celsius" class="active" style="text-decoration: none;"> °C </a>/ <a href="#" id="fahren" style="text-decoration: none;"> °F </a> </span>
    <br />
    <span class="tempMin" id="cel2Fm"> Min: ${Math.round(
      forecastDay.temp.min
-   )}°C  </span>
+   )}<a href="#" id="celsius" class="active" style="text-decoration: none;"> °C </a>/ <a href="#" id="fahren" style="text-decoration: none;"> °F </a></span>
    </div>
    </div>`;
     }
