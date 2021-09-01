@@ -182,8 +182,6 @@ function displayFahrenheitTemp(event){
   tempEt.innerHTML = Math.round(fahrenheitTemp);
   celsiusLink.classList.remove("active");
   fahrenheitlink.classList.add("active");
-  let c2fconsol = document.querySelector(displayForecast(forecastDay.temp.max));
-  c2fconsol.innerHTML = `hi`;
 
 }
 
@@ -207,4 +205,11 @@ fahrenheitlink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
+function forecastFahrenheit(event){
+event.preventDefault();
+let fahrEt = (displayForecast(response(#cel2F)));
+fahrEt.innerHTML = `hi`;
+}
+let fahrenLink = document.querySelector("#forecastweek");
+fahrenLink.addEventListener("click",forecastFahrenheit);
 displayQuotes();
