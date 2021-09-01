@@ -49,7 +49,10 @@ h5{
   margin: 0 auto;
   padding-top:50px;
 }
-#timezone::first-letter, #windspeed::first-letter,#precipitation::first-letter,#description::first-letter{
+#timezone::first-letter, #windspeed::first-letter,#precipitation::first-letter{
+text-transform: capitalize;
+}
+#description::first-letter{
   text-transform: capitalize;
 }
 .active {
