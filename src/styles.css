@@ -62,7 +62,7 @@ color:#132743;
   text-transform: capitalize;
 }
 .active {
-  color:#EB6D4C;
+  color:#132743; 
   cursor: default;
   font-size: 25px;
 }
