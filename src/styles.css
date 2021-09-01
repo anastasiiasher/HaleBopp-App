@@ -75,6 +75,6 @@ font-size: larger;
 }
 #forecastweek:hover{
 font-size: 23px;
-background-color: cornflowerblue transparent;
+background: linear-gradient(360deg, rgb(208, 245, 236) 0%, rgb(223, 233, 243) 53%);
 border-radius: 5px;
 }
