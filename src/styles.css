@@ -32,7 +32,7 @@ font-family: 'Comfortaa', cursive;
   font-family:'Besley', serif;
   font-size: 20px;
   max-width: 100%;
-  text-shadow: 9px 6px 6px rgba(73, 190, 183, 0.8);
+  text-shadow: 9px 6px 12px rgba(73, 190, 183, 0.8);
   color: #49beb7;
 } 
 a { 
@@ -98,4 +98,8 @@ color:#132743;
 #today-is, #time{
   color:#132743; 
   font-size: 18px;
+}
+#weather-cel{
+  text-align: center;
+  color:#132743; 
 }
