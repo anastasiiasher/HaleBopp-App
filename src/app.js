@@ -207,7 +207,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 function forecastFahrenheit(event){
 event.preventDefault();
-let fahrEt = displayForecast(response(`obj.#cel2F`));
+let fahrEt = displayForecast(response(`#cel2F`));
 fahrEt.innerHTML = `hi`;
 }
 let fahrenLink = document.querySelector("#forecastweek");
