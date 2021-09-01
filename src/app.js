@@ -207,7 +207,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 function forecastFahrenheit(event){
 event.preventDefault();
-fetch(displayForecast(response))
+response(displayForecast)
   .catch(forecastDay.temp.max)
   .then((forecastDay.temp.max.innerHTML = (forecastDay.temp.max * 9) / 5 + 32));
 }
