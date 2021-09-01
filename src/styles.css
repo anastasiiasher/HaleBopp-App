@@ -77,4 +77,5 @@ font-size: larger;
 font-size: 23px;
 background: linear-gradient(360deg, rgb(208, 245, 236) 0%, rgb(223, 233, 243) 53%);
 border-radius: 5px;
+text-align: center;
 }
