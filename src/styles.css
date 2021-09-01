@@ -75,7 +75,6 @@ font-size: larger;
 }
 #forecastweek:hover{
 font-size: 23px;
-}
-#weather-cel{
-  font-size: 40px;
+background-color: cornflowerblue transparent;
+border-radius: 5px;
 }
