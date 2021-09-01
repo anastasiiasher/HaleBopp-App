@@ -33,7 +33,7 @@ font-family: 'Comfortaa', cursive;
   font-size: 20px;
   max-width: 100%;
   text-shadow: 9px 6px 12px rgba(73, 190, 183, 0.8);
-  color: #49beb7;
+  color: #EB6D4C;
 } 
 a { 
   text-decoration: none;
@@ -99,7 +99,7 @@ color:#132743;
   color:#132743; 
   font-size: 18px;
 }
-#weather-cel,#celsius, #fahren, #description {
+#weather-cel,#celsius, #fahren, #description, #center, #big-icon {
   text-align: center;
   color:#132743; 
 }
