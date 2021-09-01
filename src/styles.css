@@ -42,10 +42,10 @@ h5{
   padding-top: 10px;
   color:#132743; }
 #forecast{
-  padding-top:-2px;
+  padding-top:0;
   margin: 0 auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   color:#132743; 
 }
 .card{
