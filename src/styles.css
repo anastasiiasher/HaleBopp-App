@@ -73,3 +73,6 @@ color: black;
 cursor: pointer;
 font-size: larger;
 }
+#forecastweek:hover{
+font-size: larger;
+}
