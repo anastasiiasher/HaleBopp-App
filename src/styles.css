@@ -99,7 +99,7 @@ color:#132743;
   color:#132743; 
   font-size: 18px;
 }
-#weather-cel{
+#weather-cel,#celsius, #fahren, #description{
   text-align: center;
   color:#132743; 
 }
